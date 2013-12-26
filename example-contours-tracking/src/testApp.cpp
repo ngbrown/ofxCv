@@ -1,9 +1,11 @@
 #include "testApp.h"
+#include "ofGstVideoPlayer.h"
 
 using namespace ofxCv;
 using namespace cv;
 
 void testApp::setup() {
+	movie.setPlayer(ofPtr<ofGstVideoPlayer>(new ofGstVideoPlayer));
 	ofSetVerticalSync(true);
 	ofBackground(0);
 	

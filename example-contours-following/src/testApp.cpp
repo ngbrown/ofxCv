@@ -1,4 +1,5 @@
 #include "testApp.h"
+#include "ofGstVideoPlayer.h"
 
 using namespace ofxCv;
 using namespace cv;
@@ -44,6 +45,7 @@ void Glow::draw() {
 }
 
 void testApp::setup() {
+	movie.setPlayer(ofPtr<ofGstVideoPlayer>(new ofGstVideoPlayer));
 	ofSetVerticalSync(true);
 	ofBackground(0);
 	
